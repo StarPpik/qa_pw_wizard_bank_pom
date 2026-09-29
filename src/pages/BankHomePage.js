@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { expect } from "@playwright/test";
+=======
+import { expect } from '@playwright/test';
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
 
 export class BankHomePage {
   constructor(page) {
     this.page = page;
+<<<<<<< HEAD
     this.managerLoginButton = page.getByRole("button", {
       name: "Bank Manager Login",
     });
@@ -14,6 +19,10 @@ export class BankHomePage {
     });
     this.managerCustomersButton = page.getByRole("button", {
       name: "Customers",
+=======
+    this.customerLoginButton = page.getByRole('button', {
+      name: 'Customer Login',
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
     });
   }
 
@@ -24,6 +33,7 @@ export class BankHomePage {
   async clickManagerLoginButton() {
     await this.managerLoginButton.click();
   }
+<<<<<<< HEAD
 
   async visibleAddButton() {
     await expect(this.managerAddButton).toBeVisible();
@@ -36,4 +46,6 @@ export class BankHomePage {
   async visibleCustomerButton() {
     await expect(this.managerCustomersButton).toBeVisible();
   }
+=======
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
 }

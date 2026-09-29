@@ -1,16 +1,24 @@
+<<<<<<< HEAD
 import { expect } from "@playwright/test";
+=======
+import { expect } from '@playwright/test';
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
 
 export class CustomersListPage {
   constructor(page) {
     this.page = page;
+<<<<<<< HEAD
     this.lastCustomerField = page.locator("tbody tr").last();
     this.customerDeleteButton = page.locator("tbody tr").last();
     this.customerSearch = page.getByPlaceholder("Search Customer");
+=======
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
   }
 
   async open() {
     await this.page.goto("/angularJs-protractor/BankingProject/#/manager/list");
   }
+<<<<<<< HEAD
 
   async lastCustomerName(expectedFirstName) {
     const cells = this.lastCustomerField.locator("td");
@@ -37,7 +45,7 @@ export class CustomersListPage {
     await customerRow.getByRole("button").click();
   }
 
-  async deletedAccound(firstName) {
+  async deletedAccount(firstName) {
     const customerRow = this.page.getByRole("row", { name: firstName });
     await expect(customerRow).toBeHidden();
   }
@@ -53,4 +61,6 @@ export class CustomersListPage {
     // Перевіряємо, що після фільтрації залишився рівно 1 рядок
     await expect(rows).toHaveCount(1);
   }
+=======
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
 }

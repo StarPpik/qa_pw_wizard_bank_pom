@@ -5,7 +5,11 @@ import { CustomersListPage } from "../../../src/pages/manager/CustomersListPage"
 
 let firstName;
 let lastName;
+<<<<<<< HEAD
 let postCode;
+=======
+let postalCode;
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
 
 test.beforeEach(async ({ page }) => {
   /* 
@@ -18,6 +22,7 @@ test.beforeEach(async ({ page }) => {
   */
   firstName = faker.person.firstName();
   lastName = faker.person.lastName();
+<<<<<<< HEAD
   postCode = faker.location.zipCode();
 
   const addCustomer = new AddCustomerPage(page);
@@ -32,6 +37,12 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("Assert manager can search customer by Postal Code", async ({ page }) => {
+=======
+  postalCode = faker.location.zipCode();
+});
+
+test('Assert manager can search customer by Postal Code', async ({ page }) => {
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
   /* 
   Test:
   1. Open Customers page.
@@ -39,6 +50,7 @@ test("Assert manager can search customer by Postal Code", async ({ page }) => {
   3. Assert customer row is present in the table. 
   4. Assert no other rows is present in the table.
   */
+<<<<<<< HEAD
 
   const addCustomer = new AddCustomerPage(page);
   const customersList = new CustomersListPage(page);
@@ -49,4 +61,6 @@ test("Assert manager can search customer by Postal Code", async ({ page }) => {
 
   await customersList.lastCustomerPostCode(postCode);
   await customersList.assertOnlyOneRowPresent();
+=======
+>>>>>>> 4f8d19e51ffb87cb39198b080971d4371cd52afd
 });
